@@ -1,4 +1,6 @@
 # Safe Scrub
+# Please see the [other repo](https://github.com/doitintl/SafeScrub) for the canonical version of this
+
 
 Safe Scrub helps you delete the unwanted resources in your Google Cloud Platform project, 
 leaving it clean of confusing clutter and saving you money.
