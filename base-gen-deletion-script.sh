@@ -64,9 +64,9 @@ create_deletion_code() {
       echo >&2 "Listed ${#resources_array[@]} ${gcloud_component} ${resource_type}"
     fi
     for resource in "${resources_array[@]}"; do
-      # container clusters requires location argument
+      # container clusters requires location/zone argument
       if [ "${resource_type}" == "clusters" ]; then
-        [[ ${resource} =~ zones/(.+)/cluster ]] && extra_args="--zone ${BASH_REMATCH[1]}"
+        [[ ${resource} =~ (zone|location)s/(.+)/clusters ]] && extra_args="--${BASH_REMATCH[1] ${BASH_REMATCH[2]}"
       else
         extra_args=""
       fi
