@@ -71,7 +71,7 @@ create_deletion_code() {
         extra_args=""
       fi
       # No double-quote around ${resource} type because it may be an empty string and so a param that we wish to omit rather than treat as a param with value ""
-      echo "gcloud ${gcloud_component} ${resource_type} delete --project ${project_id} -q ${resource} ${async_ampersand} ${extra_args}"
+      echo "gcloud ${gcloud_component} ${resource_type} delete --project ${project_id} -q ${resource} ${extra_args} ${async_ampersand}"
     done
   done
 
